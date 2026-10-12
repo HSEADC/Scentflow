@@ -3,7 +3,28 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index</title>
+    <title>Главная</title>
   </head>
-  <body></body>
+  <body>   <!-- modify this form HTML and place wherever you want your form -->
+<div data-fs-success>Thanks for your submission!</div>
+<div data-fs-error>Oops! There was a problem submitting your form.</div>
+<form id="my-form">
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" data-fs-field />
+  <span data-fs-error="email"></span>
+  <label for="message">Message:</label>
+  <input type="text" id="message" name="message" data-fs-field />
+  <span data-fs-error="message"></span>
+  <button type="submit" data-fs-submit-btn>Submit</button>
+</form>
+ <h1>Главная</h1>
+
+    <h2>Разделы</h2>
+    <ul>
+      <li><a href="pages/articles-all.html">Статьи</a></li>
+      <li><a href="pages/concept.html">Словарь</a></li>
+      <li><a href="pages/tool_search.html">Тесты</a></li>
+      <li><a href="pages/plug.html">Тесты</a></li>
+    </ul>
+</body>
 </html>
