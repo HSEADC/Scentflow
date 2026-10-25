@@ -7,8 +7,8 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "node scripts/build.mjs",
+    "preview": "vite --open"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",

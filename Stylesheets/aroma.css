@@ -1,0 +1,64 @@
+.home .aroma-content{max-width:976px;margin:0 auto;padding-top:24px}
+.home .bottle-stage{height:600px;position:relative}
+.home .recommendation-index{position:absolute;top:8px;left:0;color:var(--muted)}
+.home .match-badge{position:absolute;right:0;top:0;border-radius:999px;padding:10px 16px;background:#fff0fa;color:#c8006e;font-size:15px;font-weight:600;line-height:normal}
+.home .hero-bottle{position:absolute;left:50%;transform:translateX(-50%);top:29px;width:436.799px;height:590.881px}
+.home .hero-bottle img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.home .perfumer{color:var(--muted);margin-bottom:2px}
+.home .aroma-description h1{font-size:80px;font-weight:700;line-height:.95;letter-spacing:-4.4px}
+.home .aroma-summary{max-width:899px;margin-top:12px;font-size:19px;line-height:1.5;color:#3a3a3a}
+.home .aroma-impression{margin-top:12px;font-size:17px;line-height:1.5;color:var(--muted)}
+.home .moment-tags{display:flex;flex-wrap:wrap;gap:20px 8px;margin-top:32px;align-items:flex-start}
+.home .moment-tags>p{display:flex;flex-wrap:wrap;gap:8px;padding:12px 18px;background:#f5f4f1;border-radius:999px;font-size:15px;line-height:normal}
+.home .moment-tags span{color:#8a8a8a}.home .moment-tags strong{font-weight:600}
+.home .moment-tags .mood-tag{background:var(--ink);color:#fff;gap:10px}.home .mood-tag span{color:#a9a7a2}
+.home .edit-moment{padding:12px 0 12px 8px;color:var(--muted)}.home .edit-moment:hover{color:var(--pink)}
+.home .aroma-details{padding-top:56px;display:flex;flex-direction:column;gap:28px}
+.home .aroma-tabs{display:flex;gap:4px;background:#f5f4f1;border-radius:16px;padding:4px}
+.home .aroma-tabs button{flex:1;min-width:0;padding:14px 8px;background:transparent;border-radius:12px;color:var(--muted);font-size:16px;font-weight:600;line-height:normal;white-space:nowrap}
+.home .aroma-tabs button[aria-selected=true]{background:white;color:var(--ink);box-shadow:0 1px 3px #14141414}
+.home .detail-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.home .note-card{border:1px solid #e4e2dd;border-radius:20px;padding:18px 20px 20px;display:flex;flex-direction:column;gap:6px;line-height:normal}
+.home .note-card .mono{color:var(--pink)}.home .note-card h2{font-size:22px;font-weight:700;letter-spacing:-.44px}
+.home .note-card>p:last-child{font-size:16px;color:#3a3a3a}
+.home .excluded-notes{margin-top:28px;font-size:16px;line-height:normal;color:var(--muted)}
+.home .character-grid>div{display:flex;flex-direction:column;gap:8px;border-radius:20px;background:#f5f4f1;padding:18px 20px 20px;line-height:normal}
+.home .character-grid .mono{color:var(--muted)}.home .character-grid h2{font-size:22px;font-weight:600}
+.home .sound-panel{display:flex;flex-direction:column;gap:28px;font-size:16px;line-height:normal}
+.home .sound-legend{display:flex;gap:18px;color:var(--muted)}.home .sound-legend p{display:flex;align-items:center;gap:6px}
+.home .legend-aroma{height:6px;width:16px;border-radius:3px;background:var(--ink)}.home .legend-request{width:3px;height:14px;border-radius:3px;background:var(--pink)}
+.home .sound-metric{display:flex;flex-direction:column;gap:10px}.home .metric-heading{display:flex;justify-content:space-between;gap:12px}.home .metric-heading h2{color:var(--muted);font-weight:400}.home .metric-heading strong{font-weight:700}
+.home .metric-track{height:8px;border-radius:4px;background:#ecebe7;position:relative}.home .metric-fill{display:block;width:70%;height:8px;border-radius:4px;background:var(--ink)}
+.home .metric-request{position:absolute;top:-6px;height:20px;width:3px;border-radius:2px;background:var(--pink)}.home .projection-request{left:39.846%}.home .longevity-request{left:49.846%}
+.home .metric-labels{display:flex;justify-content:space-between;gap:10px;color:var(--muted)}
+.home .wear-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.home .wear-card{display:flex;flex-direction:column;gap:14px;border:1px solid #e4e2dd;border-radius:20px;padding:20px 22px 22px;line-height:normal}
+.home .wear-card>.mono{color:var(--muted)}.home .weather-icons{display:flex;gap:6px}.home .weather-icons>span{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:#f5f4f1}.home .wear-card h2{font-size:19px;font-weight:600;line-height:normal}
+.home .other-recommendations{padding:104px var(--gutter) 112px}.home .other-recommendations>h2{color:var(--muted);margin-bottom:20px}
+.home .recommendation-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.home .recommendation-photo{position:relative;aspect-ratio:1;overflow:hidden;border-radius:24px;background:#f5f4f1}
+.home .recommendation-photo>p{position:absolute;top:14px;left:16px;color:var(--muted)}
+.home .recommendation-photo>img{position:absolute;object-fit:cover}
+.home .bottle-si{left:5%;top:5%;width:90%;height:90%;object-fit:contain!important;mix-blend-mode:multiply}
+.home .bottle-spell{left:0;top:-12.5%;width:100%;height:125%}
+.home .bottle-magic{left:16.1364%;top:3.1818%;width:67.7273%;height:96.8182%}
+.home .recommendation-caption{display:flex;flex-direction:column;gap:4px;margin-top:14px;padding-inline:2px;line-height:normal}
+.home .recommendation-caption .mono{color:var(--muted)}.home .recommendation-caption h3{font-size:26px;font-weight:700;letter-spacing:-.78px}
+.home.aroma-page .footer-columns{grid-template-columns:420px repeat(4,minmax(0,1fr));max-width:none}
+@media(max-width:1100px){.home .aroma-content{margin-inline:var(--gutter)}.home .aroma-description h1{font-size:clamp(46px,6.5vw,72px);letter-spacing:-3px}.home.aroma-page .footer-columns{grid-template-columns:1.6fr 1fr 1fr;row-gap:32px}}
+@media(max-width:760px){
+  .home .aroma-content{padding-top:24px}.home .bottle-stage{height:470px}.home .hero-bottle{top:40px;width:340px;height:460px;max-width:100%}.home .recommendation-index{font-size:12px;top:10px}.home .match-badge{font-size:12px;padding:9px 12px}
+  .home .aroma-description h1{font-size:clamp(42px,8vw,60px);letter-spacing:-2.3px}.home .aroma-summary{font-size:17px}.home .aroma-impression{font-size:15px}
+  .home .moment-tags{gap:8px;margin-top:24px}.home .moment-tags>p{font-size:13px;padding:10px 14px}.home .moment-tags .mood-tag{border-radius:20px}.home .edit-moment{padding-block:10px}
+  .home .aroma-details{padding-top:40px;gap:24px}.home .aroma-tabs{gap:2px}.home .aroma-tabs button{font-size:12px;padding:13px 4px}
+  .home .detail-grid{grid-template-columns:1fr}.home .note-card{padding:18px 20px}.home .note-card>p:last-child{line-height:1.4}.home .character-grid h2{font-size:21px}.home .excluded-notes{font-size:14px;line-height:1.5;margin-top:20px}
+  .home .metric-labels{font-size:12px}.home .sound-panel{font-size:14px}.home .sound-legend{gap:16px}.home .wear-card h2{font-size:18px}
+  .home .other-recommendations{padding-block:64px}.home .recommendation-grid{grid-template-columns:1fr;gap:32px}.home .recommendation-caption h3{font-size:24px}.home .recommendation-photo{max-height:520px;aspect-ratio:1}
+  .home.aroma-page .footer-columns{grid-template-columns:1fr 1fr}
+}
+@media(max-width:360px){.home .aroma-tabs button{font-size:11px}.home .hero-bottle{width:280px;height:379px;top:50px}.home .bottle-stage{height:415px}.home .aroma-description h1{font-size:38px}}
+
+/* All panels share one grid cell; the tallest sets a stable container height. */
+.home .aroma-panels{display:grid;align-items:start}
+.home .aroma-panels>.aroma-panel{grid-area:1 / 1;min-width:0}
+.home .aroma-panels>.aroma-panel[hidden]{display:block!important;visibility:hidden;pointer-events:none}
+.home .aroma-panels>.sound-panel[hidden]{display:flex!important}

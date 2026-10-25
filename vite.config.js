@@ -1,73 +1,50 @@
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
+import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { defineConfig } from 'vite'
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const root = path.resolve(__dirname, 'src')
-const outDir = path.resolve(__dirname, 'docs')
-
-const commonChunks = ['/javascripts/allStyles.js', '/javascripts/index.js']
-
-const pages = {
-  main: { file: 'index.html', chunks: commonChunks },
-  concept: { file: 'pages/concept.html', chunks: commonChunks },
-  plug: { file: 'pages/plug.html', chunks: commonChunks },
-  tool_search: { file: 'pages/tool_search.html', chunks: commonChunks },
-  articles_all: { file: 'pages/articles_all.html', chunks: commonChunks },
-  aroma: { file: 'pages/articles_all/aroma.html', chunks: commonChunks },
-  articles: { file: 'pages/articles_all/articles.html', chunks: commonChunks },
-  compilations: { file: 'pages/articles_all/compilations.html', chunks: commonChunks },
-  guides: { file: 'pages/articles_all/guides.html', chunks: commonChunks },
-  trends: { file: 'pages/articles_all/trends.html', chunks: commonChunks }
-}
-
-const chunksByFile = Object.fromEntries(
-  Object.values(pages).map(({ file, chunks }) => [file, chunks])
-)
-
-function pageChunksPlugin() {
-  return {
-    name: 'page-chunks',
-    transformIndexHtml: {
-      order: 'pre',
-      handler(html, ctx) {
-        const relFile = path
-          .relative(root, ctx.filename)
-          .split(path.sep)
-          .join('/')
-        const chunks = chunksByFile[relFile]
-        if (!chunks) return html
-
-        return {
-          html,
-          tags: chunks.map((src) => ({
-            tag: 'script',
-            attrs: { type: 'module', src },
-            injectTo: 'body'
-          }))
-        }
-      }
-    }
+const root = path.dirname(fileURLToPath(import.meta.url))
+function htmlPages(directory) {
+  const pages = []
+  for (const entry of readdirSync(directory, { withFileTypes: true })) {
+    const file = path.join(directory, entry.name)
+    if (entry.isDirectory()) pages.push(...htmlPages(file))
+    else if (entry.name.endsWith('.html')) pages.push(file)
   }
+  return pages
 }
 
-export default defineConfig(({ command }) => ({
+export default defineConfig({
   root,
-  base: command === 'build' ? '/Scentflow/' : '/',
-  plugins: [pageChunksPlugin()],
+  base: './',
+  optimizeDeps: { noDiscovery: true },
+  plugins: [{
+    name: 'missing-page',
+    configureServer(server) {
+      server.middlewares.use(async (req, res, next) => {
+        const pathname = new URL(req.url || '/', 'http://localhost').pathname
+        const isPage = req.headers.accept?.includes('text/html')
+        const isHtmlPath = !path.extname(pathname) || pathname.endsWith('.html')
+        if (!isPage || !isHtmlPath || pathname === '/' ||
+            existsSync(path.resolve(root, '.' + pathname))) return next()
+        try {
+          let html = readFileSync(path.join(root, '404.html'), 'utf8')
+          // Чтобы ссылки на странице 404 работали и для вложенных адресов.
+          html = html.replace('<head>', '<head><base href="/" />')
+          html = await server.transformIndexHtml('/404.html', html)
+          res.statusCode = 404
+          res.setHeader('Content-Type', 'text/html; charset=utf-8')
+          res.end(html)
+        } catch (error) {
+          next(error)
+        }
+      })
+    }
+  }],
   build: {
-    outDir,
-    emptyOutDir: true,
     rollupOptions: {
-      input: Object.fromEntries(
-        Object.entries(pages).map(([name, { file }]) => [
-          name,
-          path.resolve(root, file)
-        ])
-      )
+      input: [path.join(root, 'index.html'), path.join(root, '404.html'), ...htmlPages(path.join(root, 'pages'))]
     }
   },
-  server: {
-    open: true
-  }
-}))
+  server: { open: true, port: 5173, strictPort: true }
+})

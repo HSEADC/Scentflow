@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Ароматека — медиа об ароматах, настроении и памяти. Подбор аромата под состояние, погоду и конкретный момент." />
+    <meta name="theme-color" content="#f5f4f1" />
+    <title>Ароматека — ароматы под состояние</title>
+    <link rel="stylesheet" href="Stylesheets/reset.css" />
+    <link rel="stylesheet" href="./Stylesheets/home.css" />
+    <link rel="stylesheet" href="Stylesheets/mobile-menu.css" />
+    <script defer src="javascripts/mobile-menu.js"></script>
+    <script defer src="javascripts/shared.js"></script>
+    <script defer src="javascripts/newsletter.js"></script>
+    <script defer src="javascripts/home.js"></script>
+  </head>
+  <body class="home home-v5">
+    <a class="skip-link" href="#main">К содержанию</a>
+    <header class="site-header">
+      <button class="mobile-menu-toggle" type="button" data-menu-open aria-label="Открыть меню" aria-controls="mobile-menu" aria-expanded="false"><img src="images/navigation/burger.svg" alt="" /></button>
+      <a class="wordmark" href="./index.html" aria-label="Ароматека — главная">ароматека<span aria-hidden="true"></span></a>
+      <a class="select-scent" href="./pages/tool_search.html">Подобрать аромат <span aria-hidden="true">→</span></a>
+    </header>
+    <dialog class="mobile-menu" id="mobile-menu" aria-label="Меню Ароматеки">
+      <div class="mobile-menu-header">
+        <button class="mobile-menu-toggle" type="button" data-menu-close aria-label="Закрыть меню"><img src="images/navigation/close.svg" alt="" /></button>
+        <a class="wordmark" href="index.html" aria-label="Ароматека — главная">ароматека<span aria-hidden="true"></span></a>
+      </div>
+      <div class="mobile-menu-body">
+        <nav class="mobile-menu-links" aria-label="Разделы сайта">
+          <a href="pages/articles_all/articles.html">Статьи<span aria-hidden="true">→</span></a>
+          <a href="pages/articles_all/guides.html">Гайды<span aria-hidden="true">→</span></a>
+          <a href="pages/articles_all/trends.html">Тренды<span aria-hidden="true">→</span></a>
+          <a href="pages/articles_all/aroma.html">Ароматы<span aria-hidden="true">→</span></a>
+          <a href="index.html">О проекте<span aria-hidden="true">→</span></a>
+        </nav>
+        <div class="mobile-menu-bottom">
+          <a class="mobile-menu-cta" href="pages/tool_search.html">Подобрать аромат <span aria-hidden="true">→</span></a>
+          <nav class="mobile-menu-socials" aria-label="Социальные сети"><a href="https://t.me/scentflowy" target="_blank" rel="noopener noreferrer">Telegram</a><a href="https://www.instagram.com/scentflowy/" target="_blank" rel="noopener noreferrer">Instagram</a></nav>
+        </div>
+      </div>
+    </dialog>
+
+    <main id="main">
+      <div class="cover"><img src="./images/home/cover.png" alt="Крупные ягоды черники и розовые лепестки в воде" fetchpriority="high" /></div>
+      <section class="intro" aria-labelledby="intro-title">
+        <h1 id="intro-title">Ароматы под  <br />состояние,  <br />а не по нотам</h1>
+        <a class="intro-mobile-cta" href="./pages/tool_search.html">Подобрать аромат</a>
+        <div class="intro-label mono"><p><img src="./images/home/dot.svg" alt="" />Медиа об ароматах</p><p>Ароматека ©26</p></div>
+        <p class="intro-copy">Ароматека рассказывает, как запах работает с настроением, погодой и памятью, — и помогает выбрать аромат под конкретный момент, без регистрации.</p>
+        <!--
+        <nav class="categories mono" aria-label="Рубрики"><span>Рубрики:</span><a href="./pages/articles_all/articles.html">Статьи</a><a href="./pages/articles_all/guides.html">Гайды</a><a href="./pages/articles_all/trends.html">Тренды</a><a href="./pages/articles_all/aroma.html">Ароматы</a></nav>
+        -->
+      </section>
+      <section class="rubric-slider" aria-roledescription="карусель" aria-labelledby="rubric-title">
+        <div class="rubric-heading"><div class="rubric-title-wrap"><h2 id="rubric-title">Статьи</h2><span class="soon-sticker">Скоро</span></div><p id="rubric-description">Большие тексты о том, как запах работает с памятью, настроением и погодой.</p></div>
+        <div class="rubric-window">
+          <div class="rubric-rail">
+            <div class="rubric-slide articles-slide" id="rubric-articles" role="group" aria-roledescription="слайд" aria-label="Статьи, 1 из 3">
+              <article class="editorial-card article-feature"><img src="images/home/card-memory.png" alt="Розовые лепестки и золотистые медовые соты" loading="lazy" /><span class="soon-badge mono">Скоро</span><div class="editorial-caption"><p class="mono">Лонгрид · 16 мин</p><h3>Запах, который помнит за нас</h3></div></article>
+              <div class="article-side-list"><article class="article-side"><span class="article-placeholder" aria-hidden="true"></span><div><p class="mono">Эссе · 9 мин · скоро</p><h3>Почему дождь пахнет</h3></div></article><article class="article-side"><img src="images/home/cover.png" alt="Черника и лепестки в воде" loading="lazy" /><div><p class="mono">Исследование · 12 мин · скоро</p><h3>Аромат как дневник: как запахи хранят воспоминания</h3></div></article></div>
+            </div>
+            <div class="rubric-slide guides-slide" id="rubric-guides" role="group" aria-roledescription="слайд" aria-label="Гайды, 2 из 3" aria-hidden="true" inert>
+<article class="editorial-card "><img src="images/home/guide-concentration.png" alt="" loading="lazy" /><span class="editorial-number">01</span><div class="editorial-caption"><p class="mono">Гайд · 8 мин · скоро</p><h3>EDP, EDT, Parfum: что <br />значат буквы на флаконе</h3></div></article><article class="editorial-card "><img src="images/home/guide-wardrobe.png" alt="" loading="lazy" /><span class="editorial-number">02</span><div class="editorial-caption"><p class="mono">Гайд · 8 мин · скоро</p><h3>Как собрать гардероб <br />из трёх ароматов</h3></div></article><article class="editorial-card "><img src="images/home/card-guide.png" alt="" loading="lazy" /><span class="editorial-number">03</span><div class="editorial-caption"><p class="mono">Гайд · 6 мин · скоро</p><h3>Что такое шлейф <br />и зачем он вам</h3></div></article>
+            </div>
+            <div class="rubric-slide trends-slide" id="rubric-trends" role="group" aria-roledescription="слайд" aria-label="Тренды, 3 из 3" aria-hidden="true" inert>
+              <div class="trend-cards"><article class="editorial-card trend-card"><img src="images/home/trend-steam.png" alt="" loading="lazy" /><span class="trend-stage mono"><span class="stage-dots" aria-hidden="true"><i class="lit"></i><i class=""></i><i class=""></i></span>Зарождается</span><div class="editorial-caption"><p class="mono">Тренд · 4 мин · скоро</p><h3>Пар, баня и дым: <br />«горячие» ароматы осени</h3></div></article><article class="editorial-card trend-card"><img src="images/home/trend-solid.png" alt="" loading="lazy" /><span class="trend-stage mono"><span class="stage-dots" aria-hidden="true"><i class="lit"></i><i class="lit"></i><i class=""></i></span>Растёт</span><div class="editorial-caption"><p class="mono">Тренд · 5 мин · скоро</p><h3>Масла и твёрдые духи: <br />ароматы без спирта</h3></div></article><article class="editorial-card trend-card"><img src="images/home/card-trends.png" alt="" loading="lazy" /><span class="trend-stage mono"><span class="stage-dots" aria-hidden="true"><i class="lit"></i><i class="lit"></i><i class="lit"></i></span>Мейнстрим</span><div class="editorial-caption"><p class="mono">Тренд · 5 мин · скоро</p><h3>Skin scents — тихая <br />роскошь парфюмерии</h3></div></article></div>
+            </div>
+          </div>
+          <button class="rubric-arrow rubric-prev" type="button" aria-label="Предыдущая рубрика" disabled hidden><img src="images/home/arrow-prev.svg" alt="" /></button>
+          <button class="rubric-arrow rubric-next" type="button" aria-label="Следующая рубрика"><img src="images/home/arrow-next.svg" alt="" /></button>
+        </div>
+        <div class="rubric-pagination" role="group" aria-label="Выбрать рубрику"><button type="button" data-rubric="0" aria-label="Статьи" aria-controls="rubric-articles" aria-pressed="true"><span>Статьи</span></button><button type="button" data-rubric="1" aria-label="Гайды" aria-controls="rubric-guides" aria-pressed="false"><span>Гайды</span></button><button type="button" data-rubric="2" aria-label="Тренды" aria-controls="rubric-trends" aria-pressed="false"><span>Тренды</span></button></div>
+        <p class="visually-hidden" id="rubric-announcement" aria-live="polite"></p>
+      </section>
+      <section class="manifest" aria-label="Об Ароматеке">
+        <div class="manifest-tabs mono" role="tablist" aria-label="О проекте">
+          <button id="tab-manifest" type="button" role="tab" aria-selected="true" aria-controls="panel-manifest">Манифест<span class="tab-track" aria-hidden="true"><span class="tab-fill"></span></span></button>
+          <button id="tab-how" type="button" role="tab" aria-selected="false" aria-controls="panel-how" tabindex="-1">Как устроена Ароматека<span class="tab-track" aria-hidden="true"><span class="tab-fill"></span></span></button>
+        </div>
+        <div class="manifest-content">
+        <div class="manifest-panel" id="panel-manifest" role="tabpanel" aria-labelledby="tab-manifest" tabindex="0"><img src="./images/home/dot.svg" alt="" /><blockquote>«Мы не ищем парфюм по нотам. Мы <br class="desktop-quote-break" />ищем аромат для момента — для погоды, <br class="desktop-quote-break" />ситуации и того, что хочется почувствовать»</blockquote><div class="manifest-collage" aria-hidden="true"><div class="mini mini-first"><div><img src="./images/home/manifest-first.png" alt="" loading="lazy" /></div></div><div class="mini mini-second"><img src="./images/home/manifest-second.png" alt="" loading="lazy" /></div><div class="mini mini-third"><img src="./images/home/manifest-third.png" alt="" loading="lazy" /></div></div></div>
+        <div class="manifest-panel how-panel" id="panel-how" role="tabpanel" aria-labelledby="tab-how" tabindex="0" hidden>
+          <div class="how-grid">
+            <div class="how-concept"><p class="mono">Концепция</p><h2>Как устроена Ароматека</h2></div>
+            <div class="how-step"><p class="mono">Шаг 01</p><h3>Медиа</h3><p>Статьи, гайды и тренды — основа Ароматеки. Объясняем, как аромат работает с настроением, погодой и памятью.</p></div>
+            <div class="how-step"><p class="mono">Шаг 02</p><h3>Подбор по моменту</h3><p>Виджет-капсула: погода, сценарий, желаемое состояние. Подбор считается прямо в браузере — без регистрации и личного кабинета.</p></div>
+            <div class="how-step"><p class="mono">Шаг 03</p><h3>Карточка аромата</h3><p>Каждый аромат описан тегами: сценарий, температура, отличие. Ноты, шлейф и стойкость — на странице аромата.</p></div>
+          </div>
+        </div>
+        </div>
+      </section>
+      <section class="home-catalog" aria-labelledby="catalog-title">
+        <div class="catalog-heading"><div><h2 id="catalog-title">Ароматы</h2><p class="mono">Каталог</p></div><p>Карточки ароматов: ноты, характер, как звучит и когда носить. Одна уже открыта — как пример.</p></div>
+        <article class="catalog-feature">
+          <a class="catalog-feature-image" href="pages/articles_all/aroma.html" aria-label="Tom Ford Lost Cherry — страница аромата"><span class="catalog-badge">Пробная статья</span><img src="images/home/catalog-lost-cherry.png" alt="Флакон Tom Ford Lost Cherry" loading="lazy" /></a>
+          <div class="catalog-feature-copy"><p class="mono perfume-author">Луиза Тернер</p><h3>Tom Ford <br />Lost Cherry</h3><p class="perfume-description">Чёрная вишня с горьким миндалём: тепло и немного игры. Собирает после долгого дня и звучит уверенно.</p><ul class="perfume-tags"><li><span class="mono">Сценарий</span>Свидание</li><li><span class="mono">Погода</span>Дождь · +12 °C</li><li><span class="mono">Время</span>Вечер</li></ul><a class="perfume-link" href="pages/articles_all/aroma.html">Страница аромата <span aria-hidden="true">→</span></a></div>
+        </article>
+        <div class="catalog-grid">
+          <a class="catalog-card catalog-si" href="pages/articles_all.html"><span class="soon-badge mono">Скоро</span><img src="images/aroma/si.png" alt="Флакон Giorgio Armani Sì" loading="lazy" /><div><p class="mono">Giorgio Armani</p><h3>Sì</h3></div></a>
+          <a class="catalog-card catalog-mushrooms" href="pages/articles_all.html"><span class="soon-badge mono">Скоро</span><img src="images/aroma/magic-mushrooms.png" alt="Флакон Bohoboco Magic Mushrooms" loading="lazy" /><div><p class="mono">Bohoboco</p><h3>Magic Mushrooms</h3></div></a>
+          <a class="catalog-card catalog-spell" href="pages/articles_all.html"><span class="soon-badge mono">Скоро</span><img src="images/home/catalog-spell.png" alt="Флакон Louis Vuitton Spell On You" loading="lazy" /><div><p class="mono">Louis Vuitton</p><h3>Spell On You</h3></div></a>
+        </div>
+      </section>
+      <section class="newsletter" aria-labelledby="newsletter-title"><div class="newsletter-box"><p class="mono newsletter-label">Рассылка · по четвергам</p><h2 id="newsletter-title">Одно тихое письмо в неделю <br />— об ароматах и моментах</h2><p class="newsletter-copy">Новые истории и подборка под погоду на выходные.</p><form class="newsletter-form" id="my-form" action="https://formspree.io/f/xqpawdoj" method="POST"><div class="email-field"><label class="visually-hidden" for="newsletter-email">Ваш email</label><input id="newsletter-email" name="email" type="email" autocomplete="email" placeholder="Ваш email" data-fs-field required /><button type="submit" data-fs-submit-btn>Подписаться</button></div><span data-fs-error="email" class="field-error" aria-live="polite"></span><p class="mono newsletter-hint">Отписаться можно в один клик</p><p class="form-status" role="status" aria-live="polite"></p></form></div></section>
+    </main>
+    <footer class="site-footer"><div class="footer-columns"><div class="footer-brand"><a class="footer-wordmark" href="./index.html">ароматека<img src="./images/home/footer-dot.svg" alt="" /></a><p>Медиа об ароматах и о том, что они делают с нами. Подбор по состоянию, а не по нотам.</p></div><nav class="footer-column" aria-label="Все рубрики"><h2 class="mono">Рубрики</h2><a href="./pages/articles_all/articles.html">Статьи</a><a href="./pages/articles_all/guides.html">Гайды</a><a href="./pages/articles_all/trends.html">Тренды</a><a href="./pages/articles_all/compilations.html">Подборки</a><a href="./pages/articles_all/aroma.html">Ароматы</a></nav><nav class="footer-column" aria-label="Проект"><h2 class="mono">Проект</h2><a href="./pages/concept.html">Концепция</a><a href="./pages/tool_search.html">Подбор аромата</a></nav><div class="footer-column"><h2 class="mono">Контакты</h2><a href="mailto:hello@scentflow.ru">hello@scentflow.ru</a></div><div class="footer-column"><h2 class="mono">Мы в соцсетях</h2><div class="socials"><a href="https://t.me/scentflowy" target="_blank" rel="noopener noreferrer">Telegram</a><a href="https://www.instagram.com/scentflowy/" target="_blank" rel="noopener noreferrer">Instagram</a></div></div></div><div class="footer-bottom"><span>© 2026 Ароматека</span><a href="./pages/privacy.html">Политика конфиденциальности</a><a href="./pages/terms.html">Правила использования</a></div></footer>
+
+  </body>
+</html>

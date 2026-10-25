@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#efeeeb" />
+    <meta name="description" content="Политика конфиденциальности — раздел Ароматеки в разработке. Оставьте email, чтобы узнать о запуске." />
+    <meta name="robots" content="noindex" />
+    <title>Политика конфиденциальности — ароматека</title>
+    <link rel="stylesheet" href="../Stylesheets/reset.css" />
+    <link rel="stylesheet" href="../Stylesheets/home.css" />
+    <link rel="stylesheet" href="../Stylesheets/mobile-menu.css" />
+    <link rel="stylesheet" href="../Stylesheets/placeholder.css" />
+    <script defer src="../javascripts/mobile-menu.js"></script>
+    <script defer src="../javascripts/shared.js"></script>
+    <script defer src="../javascripts/newsletter.js"></script>
+    <script defer src="../javascripts/placeholder.js"></script>
+  </head>
+  <body class="home placeholder-page">
+    <a class="skip-link" href="#main">К содержанию</a>
+    <header class="site-header">
+      <button class="mobile-menu-toggle" type="button" data-menu-open aria-label="Открыть меню" aria-controls="mobile-menu" aria-expanded="false"><img src="../images/navigation/burger.svg" alt="" /></button>
+      <a class="wordmark" href="../index.html" aria-label="Ароматека — главная">ароматека<span aria-hidden="true"></span></a>
+      <nav class="header-nav" aria-label="Основная навигация">
+        <a class="pill" href="../index.html">О проекте</a>
+        <a class="pill back-link" href="../index.html" data-back><img src="../images/home/arrow-left.svg" alt="" />Назад</a>
+      </nav>
+      <a class="select-scent" href="tool_search.html">Подобрать аромат</a>
+    </header>
+    <dialog class="mobile-menu" id="mobile-menu" aria-label="Меню Ароматеки">
+      <div class="mobile-menu-header">
+        <button class="mobile-menu-toggle" type="button" data-menu-close aria-label="Закрыть меню"><img src="../images/navigation/close.svg" alt="" /></button>
+        <a class="wordmark" href="../index.html" aria-label="Ароматека — главная">ароматека<span aria-hidden="true"></span></a>
+      </div>
+      <div class="mobile-menu-body">
+        <nav class="mobile-menu-links" aria-label="Разделы сайта">
+          <a href="articles_all/articles.html">Статьи<span aria-hidden="true">→</span></a>
+          <a href="articles_all/guides.html">Гайды<span aria-hidden="true">→</span></a>
+          <a href="articles_all/trends.html">Тренды<span aria-hidden="true">→</span></a>
+          <a href="articles_all/aroma.html">Ароматы<span aria-hidden="true">→</span></a>
+          <a href="../index.html">О проекте<span aria-hidden="true">→</span></a>
+        </nav>
+        <div class="mobile-menu-bottom">
+          <a class="mobile-menu-cta" href="tool_search.html">Подобрать аромат <span aria-hidden="true">→</span></a>
+          <nav class="mobile-menu-socials" aria-label="Социальные сети"><a href="https://t.me/scentflowy" target="_blank" rel="noopener noreferrer">Telegram</a><a href="https://www.instagram.com/scentflowy/" target="_blank" rel="noopener noreferrer">Instagram</a></nav>
+        </div>
+      </div>
+    </dialog>
+
+    <main id="main" class="placeholder-main">
+      <section class="coming-soon" aria-labelledby="coming-soon-title">
+        <p class="development-badge"><span aria-hidden="true"></span>В разработке</p>
+        <h1 id="coming-soon-title">Хорошему аромату нужно <br />время, чтобы раскрыться</h1>
+        <p class="coming-soon-copy">Ароматека — медиа об ароматах и о том, что они делают с нами. Мы подбираем парфюм под состояние, погоду и момент, а не по нотам.</p>
+        <form class="newsletter-form launch-form" id="my-form" action="https://formspree.io/f/xqpawdoj" method="POST" data-success-message="Спасибо! Сообщим вам о запуске.">
+          <input type="hidden" name="message" value="Сообщить о запуске раздела: Политика конфиденциальности" />
+          <div class="email-field"><label class="visually-hidden" for="launch-email">Ваш email</label><input id="launch-email" name="email" type="email" autocomplete="email" placeholder="Ваш email" data-fs-field required /><button type="submit" data-fs-submit-btn>Сообщить о запуске</button></div>
+          <span data-fs-error="email" class="field-error" aria-live="polite"></span>
+          <p class="newsletter-hint">Одно письмо в день запуска. Без рассылок и спама.</p>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+        <nav class="launch-socials" aria-label="Социальные сети"><a href="https://t.me/scentflowy" target="_blank" rel="noopener noreferrer">Telegram</a><a href="https://www.instagram.com/scentflowy/" target="_blank" rel="noopener noreferrer">Instagram</a></nav>
+      </section>
+    </main>
+    <footer class="launch-footer">© 2026 Ароматека</footer>
+  </body>
+</html>
