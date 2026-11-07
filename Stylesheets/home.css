@@ -279,3 +279,9 @@
 .home.home-v5 .manifest-collage .mini-first>div{position:absolute;inset:0;width:auto;height:auto;overflow:visible}
 .home.home-v5 .manifest-collage .mini-second{left:71.34px;top:0;width:81.279px;height:81.279px}
 .home.home-v5 .manifest-collage .mini-third{left:130.05px;top:14.32px;width:93.954px;height:93.954px}
+
+/* Updated first screen from Figma node 75:197. */
+@media(min-width:761px){
+ .home.home-v5 .cover>img{height:240px;aspect-ratio:auto;object-position:center}
+ .home.home-v5 .intro{row-gap:64px;padding:36px var(--gutter) 88px;min-height:483px}
+}
