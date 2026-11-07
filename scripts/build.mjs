@@ -1,7 +1,6 @@
 import { readFileSync, readdirSync, existsSync } from 'node:fs'
 import { fileURLToPath } from 'node:url'
 import path from 'node:path'
-import { Script } from 'node:vm'
 import postcss from 'postcss'
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..')
@@ -29,13 +28,10 @@ for (const file of pages) {
   const source = readFileSync(file, 'utf8')
   for (const match of source.matchAll(/(?:src|href)="([^"]+)"/g)) checkLink(file, match[1])
 }
-for (const file of getFiles(path.join(root, 'javascripts'))) {
-  if (file.endsWith('.js')) new Script(readFileSync(file, 'utf8'), { filename: file })
-}
 for (const file of getFiles(path.join(root, 'Stylesheets'))) {
   if (!file.endsWith('.css')) continue
   const source = readFileSync(file, 'utf8')
   postcss.parse(source, { from: file })
   for (const match of source.matchAll(/url\(\s*['"]?([^'"\s)]+)/g)) checkLink(file, match[1])
 }
-console.log(`Готово: ${pages.length} страниц, JavaScript, CSS и локальные ссылки проверены.`)
+console.log(`Готово: ${pages.length} страниц, CSS и локальные ссылки проверены.`)

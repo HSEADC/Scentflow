@@ -2,8 +2,11 @@ import { fileURLToPath } from 'node:url'
 import path from 'node:path'
 import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 const root = path.dirname(fileURLToPath(import.meta.url))
+const siteBase = process.env.VITE_BASE || '/'
+
 function htmlPages(directory) {
   const pages = []
   for (const entry of readdirSync(directory, { withFileTypes: true })) {
@@ -16,10 +19,13 @@ function htmlPages(directory) {
 
 export default defineConfig({
   root,
-  base: './',
-  optimizeDeps: { noDiscovery: true },
-  plugins: [{
+  base: siteBase,
+  plugins: [react(), {
     name: 'missing-page',
+    transformIndexHtml(_html, context) {
+      if (!context.path.endsWith('/404.html')) return
+      return [{ tag: 'base', attrs: { href: siteBase }, injectTo: 'head-prepend' }]
+    },
     configureServer(server) {
       server.middlewares.use(async (req, res, next) => {
         const pathname = new URL(req.url || '/', 'http://localhost').pathname
@@ -29,8 +35,6 @@ export default defineConfig({
             existsSync(path.resolve(root, '.' + pathname))) return next()
         try {
           let html = readFileSync(path.join(root, '404.html'), 'utf8')
-          // Чтобы ссылки на странице 404 работали и для вложенных адресов.
-          html = html.replace('<head>', '<head><base href="/" />')
           html = await server.transformIndexHtml('/404.html', html)
           res.statusCode = 404
           res.setHeader('Content-Type', 'text/html; charset=utf-8')
