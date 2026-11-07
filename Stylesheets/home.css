@@ -80,7 +80,7 @@
 .home.home-v5 .rubric-slide[aria-hidden=true]{opacity:.5}
 .home.home-v5 .articles-slide{display:grid;grid-template-columns:715fr 505fr;gap:20px}
 .home.home-v5 .editorial-card{position:relative;display:block;overflow:hidden;border-radius:24px;background:#cfccc6;color:#fff;isolation:isolate}
-.home.home-v5 .editorial-card>img{width:100%;height:100%;object-fit:cover;opacity:.6;display:block;transition:transform .5s ease}
+.home.home-v5 .editorial-card>img{width:100%;height:100%;object-fit:cover;opacity:1;display:block;transition:transform .5s ease}
 .home.home-v5 .editorial-card::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,10,20,0) 40%,rgba(20,10,20,.6));pointer-events:none;z-index:0}
 .home.home-v5 .editorial-card:hover>img{transform:scale(1.025)}
 .home.home-v5 .article-feature{border-radius:28px}
@@ -93,7 +93,7 @@
 .home.home-v5 .article-feature .soon-badge{left:28px;top:24px;background:rgba(255,255,255,.16);backdrop-filter:blur(8px);color:#fff}
 .home.home-v5 .article-side-list{display:flex;flex-direction:column;justify-content:center;gap:20px}
 .home.home-v5 .article-side{display:grid;grid-template-columns:160px minmax(0,1fr);gap:20px;align-items:center}
-.home.home-v5 .article-side>img,.home.home-v5 .article-placeholder{width:160px;height:160px;object-fit:cover;border-radius:24px;opacity:.6;display:block}
+.home.home-v5 .article-side>img,.home.home-v5 .article-placeholder{width:160px;height:160px;object-fit:cover;border-radius:24px;opacity:1;display:block}
 .home.home-v5 .article-placeholder{background:#cfccc6}
 .home.home-v5 .article-side p{color:var(--subtle);margin-bottom:8px;line-height:1.2}
 .home.home-v5 .article-side h3{font-size:24px;line-height:1.15;letter-spacing:-.6px;font-weight:600}
@@ -150,11 +150,11 @@
 .home.home-v5 .catalog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:32px}
 .home.home-v5 .catalog-card{display:block;position:relative;height:340px;overflow:hidden;background:#f5f4f1;border-radius:24px}
 .home.home-v5 .catalog-card>img{position:absolute;display:block;transition:opacity .3s ease,transform .3s ease}
-.home.home-v5 .catalog-si>img{width:217.6px;height:217.6px;left:calc(50% - 108.8px);top:40.8px;mix-blend-mode:multiply;opacity:.55}
+.home.home-v5 .catalog-si>img{width:217.6px;height:217.6px;left:calc(50% - 108.8px);top:40.8px;mix-blend-mode:multiply;opacity:1}
 .home.home-v5 .catalog-mushrooms{background:#141414;color:#fff}
-.home.home-v5 .catalog-mushrooms>img{width:200px;height:250px;left:calc(50% - 100px);top:14px;object-fit:contain;opacity:.7}
-.home.home-v5 .catalog-spell>img{width:73%;height:316px;left:13.5%;top:5.9px;object-position:bottom;opacity:.55}
-.home.home-v5 .catalog-card:hover>img{opacity:.9;transform:translateY(-3px)}
+.home.home-v5 .catalog-mushrooms>img{width:200px;height:250px;left:calc(50% - 100px);top:14px;object-fit:contain;opacity:1}
+.home.home-v5 .catalog-spell>img{width:73%;height:316px;left:13.5%;top:5.9px;object-position:bottom;opacity:1}
+.home.home-v5 .catalog-card:hover>img{opacity:1;transform:translateY(-3px)}
 .home.home-v5 .catalog-mushrooms .soon-badge{background:rgba(255,255,255,.16);color:#fff;backdrop-filter:blur(8px)}
 .home.home-v5 .catalog-card>div{position:absolute;left:20px;bottom:20px;right:20px}
 .home.home-v5 .catalog-card>div .mono{color:var(--subtle);line-height:19.2px;margin-bottom:4px}
@@ -251,9 +251,6 @@
 @media(prefers-reduced-motion:reduce){
  .home.home-v5 .rubric-rail,.home.home-v5 .rubric-slide,.home.home-v5 .editorial-card>img,.home.home-v5 .rubric-arrow,.home.home-v5 .rubric-arrow img,.home.home-v5 .catalog-feature-image>img,.home.home-v5 .catalog-card>img,.home.home-v5 .perfume-link{transition:none}
 }
-/* Preserve the image saturation settings used by the Figma fills. */
-.home.home-v5 .article-feature>img,.home.home-v5 .article-side>img,.home.home-v5 .guides-slide .editorial-card:nth-child(3)>img,.home.home-v5 .trend-card:nth-child(2)>img,.home.home-v5 .trend-card:nth-child(3)>img,.home.home-v5 .catalog-mushrooms>img,.home.home-v5 .catalog-spell>img{filter:saturate(.3)}
-.home.home-v5 .catalog-si>img{filter:grayscale(1)}
 @media(max-width:760px){
  .home.home-v5 .catalog-heading>div{flex-wrap:wrap;row-gap:8px}
  .home.home-v5 .catalog-feature h3{font-size:clamp(42px,13.3vw,52px)}
@@ -273,3 +270,12 @@
  .home.home-v5 .manifest{min-height:500px;padding-bottom:48px}
  .home.home-v5 .manifest-content>.how-panel{position:relative;height:auto;margin:0}
 }
+
+/* Exact exported artwork from the Figma manifest collage. */
+.home.home-v5 .manifest-collage .mini{overflow:visible;border-radius:0;transform:none;background:transparent}
+.home.home-v5 .manifest-collage .mini::after{content:none}
+.home.home-v5 .manifest-collage .mini img{position:static;display:block;width:100%;height:100%;object-fit:contain}
+.home.home-v5 .manifest-collage .mini-first{left:0;top:1.68px;width:93.396px;height:93.396px}
+.home.home-v5 .manifest-collage .mini-first>div{position:absolute;inset:0;width:auto;height:auto;overflow:visible}
+.home.home-v5 .manifest-collage .mini-second{left:71.34px;top:0;width:81.279px;height:81.279px}
+.home.home-v5 .manifest-collage .mini-third{left:130.05px;top:14.32px;width:93.954px;height:93.954px}
