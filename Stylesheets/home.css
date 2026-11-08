@@ -70,14 +70,14 @@ html:has(> body.home.home-v5){overflow-x:clip}
 .home.home-v5{overflow-x:clip}
 .home.home-v5 .select-scent{display:flex;align-items:center;gap:24px}
 .home.home-v5 .categories a:last-child{color:var(--pink)}
-.home.home-v5 .rubric-slider{--slide-width:calc(min(100vw,1600px) - 200px);margin-top:32px}
+.home.home-v5 .rubric-slider{--slide-width:calc(min(100vw,1600px) - 200px);--slide-gap:24px;margin-top:32px}
 .home.home-v5 .rubric-heading,.home.home-v5 .catalog-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;padding:0 var(--gutter);margin-bottom:32px}
 .home.home-v5 .rubric-title-wrap{position:relative}
 .home.home-v5 .rubric-heading h2,.home.home-v5 .catalog-heading h2{font-size:96px;font-weight:700;line-height:.9;letter-spacing:-5.8px}
 .home.home-v5 .rubric-heading>p,.home.home-v5 .catalog-heading>p{width:420px;flex-shrink:0;font-size:18px;line-height:27px;color:#3a3a3a}
 .home.home-v5 .soon-sticker{position:absolute;right:-35px;bottom:-6px;transform:rotate(-15.13deg);display:flex;align-items:center;justify-content:center;width:95px;height:30px;border-radius:17px;background:var(--pink);color:#fff;font-size:19px;line-height:1;font-weight:600;letter-spacing:-.65px}
 .home.home-v5 .rubric-window{position:relative;overflow-x:clip;touch-action:pan-y}
-.home.home-v5 .rubric-rail{display:flex;gap:0;padding-left:100px;transform:translateX(calc(var(--slide-index,0) * var(--slide-width) * -1));transition:transform .7s cubic-bezier(.22,.61,.36,1)}
+.home.home-v5 .rubric-rail{display:flex;gap:var(--slide-gap);padding-left:100px;transform:translateX(calc(var(--slide-index,0) * (var(--slide-width) + var(--slide-gap)) * -1));transition:transform .7s cubic-bezier(.22,.61,.36,1)}
 .home.home-v5 .rubric-slide{flex:0 0 var(--slide-width);width:var(--slide-width);height:600px;position:relative}
 .home.home-v5 .articles-slide{display:grid;grid-template-columns:715fr 505fr;gap:20px}
 .home.home-v5 .editorial-card{position:relative;display:block;overflow:hidden;border-radius:24px;background:#cfccc6;color:#fff;isolation:isolate}
