@@ -271,6 +271,29 @@
  .home.home-v5 .manifest-content>.how-panel{position:relative;height:auto;margin:0}
 }
 
+/* Keep the main homepage showcases fully visible on common laptop screens. */
+@media(min-width:761px){
+ .home.home-v5{--showcase-max:1240px}
+ .home.home-v5 .site-header{width:min(calc(100% - 64px),var(--showcase-max));min-height:68px;margin-inline:auto;padding:12px 24px}
+ .home.home-v5 .cover{width:min(calc(100% - 64px),var(--showcase-max));margin-inline:auto;padding:0}
+ .home.home-v5 .intro{width:min(100%,var(--showcase-max));margin-inline:auto}
+ .home.home-v5 .rubric-heading{width:min(calc(100% - 64px),var(--showcase-max));margin-inline:auto}
+ .home.home-v5 .rubric-slide{height:520px}
+ .home.home-v5 .rubric-arrow{top:232px}
+ .home.home-v5 .guides-slide .editorial-card{height:520px}
+ .home.home-v5 .guides-slide .editorial-card:nth-child(2){height:380px}
+ .home.home-v5 .guides-slide .editorial-card:nth-child(3){height:450px}
+ .home.home-v5 .home-catalog{width:min(calc(100% - 64px),var(--showcase-max));margin-inline:auto;padding-inline:0}
+ .home.home-v5 .catalog-feature{min-height:460px}
+ .home.home-v5 .catalog-feature-image{min-height:458px}
+ .home.home-v5 .catalog-feature-image>img{height:360px}
+ .home.home-v5 .catalog-card{height:300px}
+}
+@media(min-width:1151px){
+ .home.home-v5 .rubric-slider{--slide-width:min(calc(100vw - 160px),1180px)}
+ .home.home-v5 .rubric-rail{padding-left:max(32px,calc((min(100vw,1600px) - var(--slide-width))/2))}
+}
+
 /* Exact exported artwork from the Figma manifest collage. */
 .home.home-v5 .manifest-collage .mini{overflow:visible;border-radius:0;transform:none;background:transparent}
 .home.home-v5 .manifest-collage .mini::after{content:none}
@@ -285,3 +308,43 @@
  .home.home-v5 .cover>img{height:240px;aspect-ratio:auto;object-position:center}
  .home.home-v5 .intro{row-gap:64px;padding:36px var(--gutter) 88px;min-height:483px}
 }
+
+/* Compact wide-desktop layout for wide, low-height screens. */
+@media(min-width:1600px){
+ .home.home-v5{--showcase-max:1180px}
+ .home.home-v5 .site-header{min-height:60px;padding-block:8px}
+ .home.home-v5 .cover>img{height:210px}
+ .home.home-v5 .intro{min-height:400px;row-gap:40px;padding-top:28px;padding-bottom:56px}
+ .home.home-v5 .intro h1{font-size:64px;letter-spacing:-3.5px}
+ .home.home-v5 .rubric-slider{--slide-width:1120px}
+ .home.home-v5 .rubric-heading,.home.home-v5 .catalog-heading{margin-bottom:20px}
+ .home.home-v5 .rubric-heading h2,.home.home-v5 .catalog-heading h2{font-size:72px;letter-spacing:-4px}
+ .home.home-v5 .rubric-heading>p,.home.home-v5 .catalog-heading>p{font-size:16px;line-height:24px}
+ .home.home-v5 .rubric-slide{height:440px}
+ .home.home-v5 .rubric-arrow{top:192px}
+ .home.home-v5 .guides-slide .editorial-card{height:440px}
+ .home.home-v5 .guides-slide .editorial-card:nth-child(2){height:320px}
+ .home.home-v5 .guides-slide .editorial-card:nth-child(3){height:380px}
+ .home.home-v5 .rubric-pagination{margin-top:20px}
+ .home.home-v5 .catalog-feature{min-height:340px}
+ .home.home-v5 .catalog-feature-image{min-height:338px}
+ .home.home-v5 .catalog-feature-image>img{height:260px}
+ .home.home-v5 .catalog-feature-copy{padding:20px 28px 24px 32px}
+ .home.home-v5 .perfume-author{margin-bottom:8px}
+ .home.home-v5 .catalog-feature h3{font-size:52px;letter-spacing:-2.6px}
+ .home.home-v5 .perfume-description{font-size:16px;line-height:24px;margin-top:12px}
+ .home.home-v5 .perfume-tags{margin-top:14px}
+ .home.home-v5 .perfume-tags li{padding:8px 12px;font-size:14px}
+ .home.home-v5 .perfume-tags .mono{font-size:14px}
+ .home.home-v5 .perfume-link{padding:13px 18px;font-size:14px}
+ .home.home-v5 .catalog-grid{gap:16px;margin-top:20px}
+ .home.home-v5 .catalog-card{height:220px}
+ .home.home-v5 .catalog-si>img{width:150px;height:150px;left:calc(50% - 75px);top:22px}
+ .home.home-v5 .catalog-mushrooms>img{width:150px;height:180px;left:calc(50% - 75px);top:8px}
+ .home.home-v5 .catalog-spell>img{width:58%;height:210px;left:21%;top:0}
+ .home.home-v5 .catalog-card>div{bottom:14px}
+}
+
+/* The header content stays constrained while its translucent backdrop spans the viewport. */
+.home.home-v5 .site-header{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;isolation:isolate}
+.home.home-v5 .site-header::before{content:'';position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);background:rgba(245,244,241,.72);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);pointer-events:none}
