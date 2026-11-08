@@ -181,6 +181,7 @@ html:has(> body.home.home-v5){overflow-x:clip}
  .home.home-v5 .catalog-feature-copy{padding:32px 24px}.home.home-v5 .catalog-feature h3{font-size:60px;letter-spacing:-3px}
  .home.home-v5 .perfume-description{font-size:16px;line-height:24px}
  .home.home-v5 .perfume-tags{gap:6px;margin-top:20px}.home.home-v5 .perfume-tags li{font-size:12px;padding:8px 10px}.home.home-v5 .perfume-tags .mono{font-size:12px}
+ .home.home-v5 .perfume-link{margin-top:16px}
  .home.home-v5 .catalog-heading>div{gap:20px}.home.home-v5 .footer-columns{grid-template-columns:1.6fr 1fr 1fr}
 }
 @media(max-width:760px){

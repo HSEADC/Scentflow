@@ -57,6 +57,9 @@
 }
 @media(max-width:360px){.home .aroma-tabs button{font-size:11px}.home .hero-bottle{width:280px;height:379px;top:50px}.home .bottle-stage{height:415px}.home .aroma-description h1{font-size:38px}}
 
+/* Match the 80% browser-scale composition on wide aroma-page layouts. */
+@media(min-width:1440px){.home.aroma-page{zoom:.8}}
+
 /* All panels share one grid cell; the tallest sets a stable container height. */
 .home .aroma-panels{display:grid;align-items:start}
 .home .aroma-panels>.aroma-panel{grid-area:1 / 1;min-width:0}
