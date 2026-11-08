@@ -262,7 +262,7 @@ html:has(> body.home.home-v5){overflow-x:clip}
 
 /* Both tab panels reserve space: switching tabs never moves the catalogue. */
 .home.home-v5 .manifest{height:auto;min-height:605px;padding-bottom:120px}
-.home.home-v5 .manifest-content{display:grid;align-items:stretch;margin-top:32px}
+.home.home-v5 .manifest-content{display:grid;align-items:stretch;width:min(100%,var(--showcase-max,1240px));margin:32px auto 0}
 .home.home-v5 .manifest-content>.manifest-panel{grid-area:1/1;position:relative;inset:auto;height:auto;min-height:301px;margin:0;min-width:0}
 .home.home-v5 .manifest-content>.manifest-panel[hidden]{display:flex!important;visibility:hidden;pointer-events:none}
 .home.home-v5 .manifest-content>#panel-manifest{justify-content:center;gap:20px}
@@ -348,6 +348,8 @@ html:has(> body.home.home-v5){overflow-x:clip}
 
 /* At the 1440–1599px desktop step, keep the perfume tiles at the reference scale. */
 @media(min-width:1440px) and (max-width:1599px){
+ .home.home-v5 .manifest-content{width:min(100%,944px)}
+ .home.home-v5 .how-step>p:last-child{font-size:13px;line-height:1.45}
  .home.home-v5 .home-catalog{width:min(calc(100% - 64px),944px)}
  .home.home-v5 .catalog-heading{margin-bottom:16px}
  .home.home-v5 .catalog-heading>div{gap:26px}
